@@ -87,7 +87,7 @@ basicNN <- ggplot(data,aes(y=SIMS,x=GRIP))
 basicNN + geom_point()
 ```
 
-
+The scatterplot seems to boast a strong linear relationship, but further testing is required to see if it's a more logical model than the one explored prior.
 
 ### Numerical results 
 
