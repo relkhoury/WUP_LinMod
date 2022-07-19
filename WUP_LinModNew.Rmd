@@ -99,7 +99,7 @@ The correlation coefficient for Model 2 is slightly lesser than its Model 1 coun
 model.2 <- lm(SIMS~GRIP,data=data)
 summary.lm(model.2)
 ```
-
+The residual standard error for model 2 is slightly higher as compared to model 1, meaning that the range within which 95% of the data falls is somewhat larger since the value is larger (the range, determined by the two standard deviations, would turn out wider).  Finally, examining the adjusted r-squared value reveals it is lessser than model 1, implying that model 2 does a lesser job at accounting for error in the dataset.  
 
 
 
