@@ -90,10 +90,15 @@ basicNN + geom_point()
 The scatterplot seems to boast a strong linear relationship, but further testing is required to see if it's a more logical model than the one explored prior.
 
 ### Numerical results 
-
-
+```{r}
+cor(SIMS~GRIP,data=data)
+```
+The correlation coefficient for Model 2 is slightly lesser than its Model 1 counterpart; this might imply that the scatterplot is a less applicable model for the question at hand.
 ### Inferential  (Build model.2)
-  
+```{r}
+model.2 <- lm(SIMS~GRIP,data=data)
+summary.lm(model.2)
+```
 
 #### predict model.2 at target point
 
