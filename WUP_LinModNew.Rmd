@@ -81,10 +81,10 @@ This scatterplot displays a strong, positive, somewhat linear relationship betwe
 
 ### Now add in scatterplot
 ```{r}
-basicNN <- ggplot(data,aes(y=SIMS,x=GRIP))
+basicGrip <- ggplot(data,aes(y=SIMS,x=GRIP))
 ```
 ```{r}
-basicNN + geom_point()
+basicGrip + geom_point()
 ```
 
 The scatterplot seems to boast a strong linear relationship, but further testing is required to see if it's a more logical model than the one explored prior.
@@ -115,14 +115,18 @@ predict(model.2, targetpoint, interval = "prediction")
 
 
 #### now add the model fit to our plot for model.2
-  
-
+```{r}
+basicGrip + geom_point() + geom_lm()
+```
+This scatterplot relates the variables SIMS and GRIP.  Based on the earlier data calculated, along with the line of best fit generated, it is clear this is the least reliable model created thus far, since there seems to be more residual variation among the points compared to the line plotted.
 
 ## Model 3 SIM~ARM+GRIP
 
 ### Numerical results (cor)
+```{r}
+cor(SIMS~ARM+GRIP,data=data)
+```
 
-`
   
 ### Inferential  (Build 2-dimentional model.3)
 
