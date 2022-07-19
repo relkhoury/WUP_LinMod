@@ -152,7 +152,7 @@ predict(model.3, targetpoint, interval = "prediction")
 ```{r}
 anova(model.1, model.3)
 ```
-Model 3 reduced the residual standard error of model 1 by 29.45, indicating it is a more apt model compared to model 1.  P-value shows this is difference is statistically significant.
+Model 3 reduced the residual standard error of model 1 by 29.45, indicating it is a more apt model compared to model 1.  P-value shows this is difference is statistically significant, since it is far less than .05.
 
 
 
@@ -161,7 +161,17 @@ Model 3 reduced the residual standard error of model 1 by 29.45, indicating it i
 ```{r}
 anova(model.2, model.3)
 ```
+When comparing models 2 and 3 through an ANOVA test, the Residual Sum of Squares (RSS) for model 3 is lesser than model 1; because a RSS measures the variance in a dataset, we can safely assume that model 3 is a better, dependable model.  Additionally, model 3 reduced the standard error of model 1 by 54.639, further cementing that it's a more accuarte and reliable model than the latter.
+
+
+
+
 ## Informally compare Model.1 with model.2
+
+
+
+
+
 ```{r}
 anova(model.2, model.1)
 ```
