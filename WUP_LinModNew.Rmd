@@ -134,16 +134,29 @@ The correlation coefficient r for Model 3 is the highest of any model generated 
 model.3 <- lm(SIMS~ARM+GRIP,data=data)
 summary.lm(model.3)
 ```
-When considering the inferential data for Model 3, the residual standard error is the least of any model, suggesting that the range of values that 95% of the response data fall under is constricted and closely associated; this is reinforced by the correlation coefficient.  The adjusted R-squared is .5338, the highest of any model created.  At face value, this means that 53.38% of our data's error is accounted for by Model 3.  Evidently, this means that the most accuarate model generated is Model 3, since it minimizes the error generated within the dataset.
+When considering the inferential data for Model 3, the residual standard error is the least of any model, suggesting that the range of values that 95% of the response data fall under is constricted and closely associated; this is reinforced by the correlation coefficient.  The adjusted R-squared is .5338, the highest of any model created.  At face value, this means that 53.38% of our data's error is accounted for by Model 3.  Evidently, this means that the most accurate model generated is Model 3, since it minimizes the error generated within the dataset.
 
 
 
 #### predict model.3 at target point
-  
+```{r}
+targetpoint <- data.frame(ARM = 88, GRIP = 94)
+```
+```{r}
+predict(model.3, targetpoint, interval = "prediction")
 
+```
 ## Comparing nested models ANOVA Test
 
 ### Model.1 vs Model.3
+```{r}
+anova(model.1, model.3)
+```
+
+
+
+
+
 ### Model.2 vs Model.3
 
 ## Informally compare Model.1 with model.2
