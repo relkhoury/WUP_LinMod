@@ -126,6 +126,7 @@ This scatterplot relates the variables SIMS and GRIP.  Based on the earlier data
 ```{r}
 cor(SIMS~ARM+GRIP,data=data)
 ```
+The correlation coefficient r for Model 3 is the highest of any model generated prior, with a value of .732.  It implies that the best explanatory variable is not ARM or GRIP, but, rather, both acting in tandem with one another.  More testing is required to confirm this.  
 
   
 ### Inferential  (Build 2-dimentional model.3)
