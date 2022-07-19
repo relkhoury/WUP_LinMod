@@ -105,6 +105,14 @@ The residual standard error for model 2 is slightly higher as compared to model 
 
 
 #### predict model.2 at target point
+```{r}
+targetpoint <- data.frame(ARM = 88, GRIP = 94)
+```
+```{r}
+predict(model.2, targetpoint, interval = "prediction")
+
+```
+
 
 #### now add the model fit to our plot for model.2
   
