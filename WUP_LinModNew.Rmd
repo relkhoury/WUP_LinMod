@@ -152,12 +152,16 @@ predict(model.3, targetpoint, interval = "prediction")
 ```{r}
 anova(model.1, model.3)
 ```
-
+Model 3 reduced the residual standard error of model 1 by 29.45, indicating it is a more apt model compared to model 1.  P-value shows this is difference is statistically significant.
 
 
 
 
 ### Model.2 vs Model.3
-
+```{r}
+anova(model.2, model.3)
+```
 ## Informally compare Model.1 with model.2
-
+```{r}
+anova(model.2, model.1)
+```
