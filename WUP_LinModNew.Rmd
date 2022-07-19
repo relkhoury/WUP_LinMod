@@ -34,24 +34,59 @@ data <- read.csv(file="https://onlinestatbook.com/case_studies_rvls/physical_str
 ## Model 1 SIM~ARMS
 
 ### scatterplot
-
-
+```{r}
+basicNN <- ggplot(data,aes(y=SIMS,x=ARM))
+```
+```{r}
+basicNN + geom_point()
+```
 
 
 ### Numerical results
+```{r}
+cor(SIMS~ARM,data=data)
+```
+There is a decently high correlation coefficient (r) when ARM is the explanatory variable and SIMS is the response variable.
 
 
 ### Inferential  (Build model.1)
+```{r}
+model.1 <- lm(SIMS~ARM,data=data)
+summary.lm(model.1)
+```
+The residual standard error (1.226) is relatively low, indicating our data points are, generally, near the line of best fit.  This is further supported by the adjusted r-squared (.467) indicates that the model accounts for 46.7% of the inherent error in the system.
+
+
 
 #### Predict at target point
+```{r}
+targetpoint <- data.frame(ARM = 88, GRIP = 94)
+```
 
+```{r}
+predict(model.1, targetpoint, interval = "prediction")
+
+```
+The predict function applied above yielded the optimal predicted value of SIMS when inputting an ARM value of 88; the value of 94 for GRIP was negligible here.
 
 #### scatterplot with model fit
-  
+```{r}
+basicNN + geom_point() + geom_lm()
+```
+
+This scatterplot displays a strong, positive, somewhat linear relationship between ARM and SIMS; this is further corroborated by the line of best fit.  ARM seems to be moderately apt at predicting the value of
+
 
 ## Model 2 SIM~GRIP
 
 ### Now add in scatterplot
+```{r}
+basicNN <- ggplot(data,aes(y=SIMS,x=GRIP))
+```
+```{r}
+basicNN + geom_point()
+```
+
 
 
 ### Numerical results 
