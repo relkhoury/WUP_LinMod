@@ -161,7 +161,7 @@ Model 3 reduced the residual standard error of model 1 by 29.45, indicating it m
 ```{r}
 anova(model.2, model.3)
 ```
-When comparing models 2 and 3 through an ANOVA test, the Residual Sum of Squares (RSS) for model 3 is lesser than model 1; because a RSS measures the variance in a dataset, we can safely assume that model 3 is a better, dependable model.  Additionally, model 3 reduced the standard error of model 1 by 54.639, further cementing that it's a more accurate and reliable model than the latter.
+When comparing models 2 and 3 through an ANOVA test, the Residual Sum of Squares (RSS) for model 3 is lesser than model 1; because a RSS measures the variance in a data set, we can safely assume that model 3 is a better, dependable model.  Additionally, model 3 reduced the standard error of model 1 by 54.639, and this, coupled with a p-value of 1.495e-09 (which fostered a sense of statistical significance, being less than .05), further cemented that it was a more accurate and reliable model than the latter.
 
 
 
@@ -175,3 +175,7 @@ When comparing models 2 and 3 through an ANOVA test, the Residual Sum of Squares
 ```{r}
 anova(model.2, model.1)
 ```
+Comparing the first and second models computed for the study provides clearer insight into Model 1's efficacy.  Running a residual sum of squares (RSS) yielded a lesser value for Model 1 than Model 2, and, because the RSS test measures variation and compatibility of a model to its data set, this aids in suggesting that Model 1 is a better predictor of the SIM variable than its counterpart.  Additionally, Model 1 seems to have reduced the residual standard error of Model 2 by about 25.189.  Consequently, in a direct comparison between the two, it would appear that model 1 is the more accurate bivariate model to predict SIM.  Despite the lack of a p-value to verify our findings with statistical significance, the aforementioned evidence, coupled with the R values, R^2 values, and residual standard errors, all point to Model 1 being a more reliable source of inference than Model 2.
+
+
+
